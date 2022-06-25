@@ -29,6 +29,7 @@ class WelcomeMessage:
             if user.username == self.username:
                 print("sending welcome message")
                 self.send_welcome_message()
+                break
 
     def generate_welcome_message_for_specific_user(self) -> str:
         print("welcome message generated")
