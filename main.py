@@ -7,7 +7,7 @@ appsettings = "appsettings.json"
 
 class App:
     def __init__(self, token: str, action):
-        print("Starting app")
+        print("Starting appsss")
         updater = Updater(token)
         updater.dispatcher.add_handler(MessageHandler(filters=Filters.all, callback=action))
         updater.start_polling()
