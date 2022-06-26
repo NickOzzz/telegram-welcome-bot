@@ -13,7 +13,7 @@ class App:
 
     def start(self):
         print(datetime.now(), "Starting app")
-        self.updater.dispatcher.add_handler(MessageHandler(filters=Filters.text & (~Filters.command), callback=self.callback))
+        self.updater.dispatcher.add_handler(MessageHandler(filters=Filters.update & Filters.text & (~Filters.command), callback=self.callback))
         self.updater.start_polling()
         self.updater.idle()
         print(datetime.now(), "finishing app")
