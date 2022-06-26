@@ -61,7 +61,7 @@ class WelcomeMessage:
         self.context.bot.send_message(chat_id=self.chat_id, text=message)
 
     def send_image(self, image_url: str) -> None:
-        print("send_image called")
+        print(datetime.now(), "send_image called")
         self.context.bot.send_photo(chat_id=self.chat_id, photo=image_url)
 
     def delete_message(self, context: CallbackContext) -> None:
