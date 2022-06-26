@@ -50,7 +50,7 @@ class WelcomeMessage:
         print(datetime.now(), "welcome message sent")
         countdown = float(self.config["deleteCountDown"])
         self.run_timer(callback_method=self.delete_message, timer=countdown)
-        self.run_timer(callback_method=self.delete_image, timer=countdown)
+        self.run_timer(callback_method=self.delete_image, timer=countdown + 3)
 
     def run_timer(self, callback_method: Callable[[CallbackContext], None], timer: float = 15) -> None:
         print(datetime.now(), "starting timer")
